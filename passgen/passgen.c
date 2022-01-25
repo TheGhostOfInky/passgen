@@ -5,7 +5,7 @@
 char gen() {
     int i = randombytes_uniform(62) + 0x30;
     if (i > 0x39) {
-        i += 8;
+        i += 7;
     }
     if (i > 0x5A) {
         i += 6;
