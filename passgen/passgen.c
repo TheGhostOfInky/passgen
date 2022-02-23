@@ -3,7 +3,7 @@
 #include "sodium.h"
 
 char gen() {
-    unsigned char i = randombytes_uniform(62) + 0x30;
+    char i = randombytes_uniform(62) + 0x30;
     if (i > 0x39) {
         i += 7;
     }
@@ -18,7 +18,10 @@ int main(int argc, char* argv[]){
     if (argv[1]) {
         len = atoi(argv[1]);
     }
+    char* arr;
+    arr = calloc(1,len+1);
     for (int i = 0; i < len; i++) {
-        printf("%c", gen());
+        arr[i] = gen();
     }
+    printf("%s", arr);
 }
