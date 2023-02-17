@@ -31,5 +31,6 @@ int main(int argc, char* argv[]) {
 	}
 	arr[len] = 0;
 	puts(arr);
+	free(arr);
 	exit(0);
 }
